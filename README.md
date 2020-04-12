@@ -6,4 +6,4 @@
 
 - Yujiang Bi
 - biyujiang@ihep.ac.cn
-- amito.me
+- https://amito.me
