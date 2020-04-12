@@ -2,10 +2,10 @@
 FROM centos:7
 
 RUN yum clean all
-ADD quarkdb.repo /etc/yum.repos.d/
 
 WORKDIR /srv
-ADD run.sh /srv
+ADD src/run.sh /srv
+ADD src/quarkdb.repo /etc/yum.repos.d/
 
 RUN yum install epel-release -y && yum makecache && yum install -y xrootd-server redis quarkdb && yum clean all
 

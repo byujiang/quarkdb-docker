@@ -10,6 +10,7 @@ services:
       - ./qdb1/xrootd-quarkdb.cfg:/etc/xrootd/xrootd-quarkdb.cfg
       - ./qdb1/xrootd:/var/log/xrootd
       - ./qdb1/eos.keytab:/etc/eos.keytab
+      - ./config.yml:/srv/config.yml
   qdb2:
     image: darkshell/quarkdb:0.4.2
     hostname: qdb2
@@ -20,6 +21,7 @@ services:
       - ./qdb2/xrootd-quarkdb.cfg:/etc/xrootd/xrootd-quarkdb.cfg
       - ./qdb2/xrootd:/var/log/xrootd
       - ./qdb2/eos.keytab:/etc/eos.keytab
+      - ./config.yml:/srv/config.yml
   qdb3:
     image: darkshell/quarkdb:0.4.2
     hostname: qdb3
@@ -30,6 +32,7 @@ services:
       - ./qdb3/xrootd-quarkdb.cfg:/etc/xrootd/xrootd-quarkdb.cfg
       - ./qdb3/xrootd:/var/log/xrootd
       - ./qdb3/eos.keytab:/etc/eos.keytab
+      - ./config.yml:/srv/config.yml
 
 networks:
   default:

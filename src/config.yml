@@ -1,0 +1,12 @@
+hosts:
+  host1:
+    hostname: "qdb1"
+    port: 7777
+  host2:
+    hostname: "qdb2"
+    port: 7777
+  host3:
+    hostname: "qdb3"
+    port: 7777
+
+uuid: "bc7b769b-d3f3-462e-b169-cc896447157c"
