@@ -1,0 +1,37 @@
+version: '3'
+services:
+  qdb1:
+    image: darkshell/quarkdb:0.4.2
+    hostname: qdb1
+    ports:
+      - 6666:7777
+    volumes:
+      - ./qdb1/quarkdb:/var/lib/quarkdb
+      - ./qdb1/xrootd-quarkdb.cfg:/etc/xrootd/xrootd-quarkdb.cfg
+      - ./qdb1/xrootd:/var/log/xrootd
+      - ./qdb1/eos.keytab:/etc/eos.keytab
+  qdb2:
+    image: darkshell/quarkdb:0.4.2
+    hostname: qdb2
+    ports:
+      - 7777:7777
+    volumes:
+      - ./qdb2/quarkdb:/var/lib/quarkdb
+      - ./qdb2/xrootd-quarkdb.cfg:/etc/xrootd/xrootd-quarkdb.cfg
+      - ./qdb2/xrootd:/var/log/xrootd
+      - ./qdb2/eos.keytab:/etc/eos.keytab
+  qdb3:
+    image: darkshell/quarkdb:0.4.2
+    hostname: qdb3
+    ports:
+      - 8888:7777
+    volumes:
+      - ./qdb3/quarkdb:/var/lib/quarkdb
+      - ./qdb3/xrootd-quarkdb.cfg:/etc/xrootd/xrootd-quarkdb.cfg
+      - ./qdb3/xrootd:/var/log/xrootd
+      - ./qdb3/eos.keytab:/etc/eos.keytab
+
+networks:
+  default:
+    driver: bridge
+    #external: true
